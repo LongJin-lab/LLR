@@ -5,7 +5,7 @@ Code of Efficient Loss Landscape Reshaping for Deep Neural Networks
 
 To get started, follow the instructions below for specific datasets:
 
-### CIFAR Dataset
+### CIFAR
 1. Navigate to the `./CIFAR` directory.
 2. In the terminal, run the following command to start training on the CIFAR dataset:
 ```bash
