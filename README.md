@@ -1,5 +1,5 @@
 # Efficient Loss Landscape Reshaping for Deep Neural Networks
-Code of Efficient Loss Landscape Reshaping for Deep Neural Networks
+Code of ``Efficient Loss Landscape Reshaping for Deep Neural Networks.''
 
 ## Getting Started
 
