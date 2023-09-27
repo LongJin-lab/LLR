@@ -1,0 +1,22 @@
+{
+    "algorithm": "grid",                
+    "parameters": {
+        "seed":{"type": "discrete", "values": [42,1234,3107]}, 
+        "dls_coe0": {"type": "discrete", "values": [2.5]},
+        "dls_coe1": {"type": "discrete", "values": [0.15]},  
+        "M": {"type": "discrete", "values": [1]},
+        "model": {"type": "categorical", "values": ["repvgg_a0","repvgg_a1","repvgg_a2","resnet18","resnet50","resnet101"]},
+        "setting": {"type": "categorical", "values": ["cyclic_dls"]},
+        "swa": {"type": "categorical", "values": [ "None"]},
+        "opt": {"type": "categorical", "values": ["sam-sgd","sgd"]},
+        "end": {"type": "discrete", "values": [1,3]},
+        "rep_num": {"type": "discrete", "values": [1,3]},
+        "dls_act": {"type": "categorical", "values": ["None","sech"]}    
+    },
+    "spec": {
+    "maxCombo": 1000000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}

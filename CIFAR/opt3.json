@@ -1,0 +1,13 @@
+{
+    "algorithm": "grid",                
+    "parameters": {
+        "dls_start": {"type": "discrete", "values": [0.09,0.08,0.07,0.06,0.05,0.04,0.03,0.02]},
+        "dls_coe0": {"type": "discrete", "values": [5]}
+    },
+    "spec": {
+    "maxCombo": 1000000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}

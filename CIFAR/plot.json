@@ -1,0 +1,28 @@
+{
+    "algorithm": "random",                
+    "parameters": {
+        "seed":{"type": "discrete", "values": [42]}, 
+        "dls_coe0": {"type": "discrete", "values": [2.5]},
+        "dls_coe1": {"type": "discrete", "values": [0.15]},  
+        "dls_coe2": {"type": "discrete", "values": [1.0]},  
+        "M": {"type": "discrete", "values": [1]},
+        "model": {"type": "categorical", "values": ["resnet18"]},
+        "setting": {"type": "categorical", "values": ["baseline"]},
+        "swa": {"type": "categorical", "values": [ "None"]},
+        "opt": {"type": "categorical", "values": ["sgd"]},
+        "end": {"type": "discrete", "values": [1]},
+        "rep_num": {"type": "discrete", "values": [0]},
+        "dls_act": {"type": "categorical", "values": ["None"]},
+        "lr": {"type": "discrete", "values": [0.05]},
+        "plus_base": {"type": "discrete", "values": [1.0]},
+        "calm_base": {"type": "discrete", "values": [1.0]},
+        "epochs": {"type": "discrete", "values": [5]},
+        "lr_scheduler": {"type": "categorical", "values": ["CosineLRscheduler"]}
+    },
+    "spec": {
+    "maxCombo": 1000000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}

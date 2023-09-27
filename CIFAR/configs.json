@@ -1,0 +1,28 @@
+{
+    "algorithm": "grid",                
+    "parameters": {
+        "seed":{"type": "discrete", "values": [3107,1234,42]}, 
+        "dls_coe0": {"type": "discrete", "values": [2.5]},
+        "dls_coe1": {"type": "discrete", "values": [0.15]},  
+        "dls_coe2": {"type": "discrete", "values": [1.0]},  
+        "M": {"type": "discrete", "values": [1]},
+        "model": {"type": "categorical", "values": ["repvgg_a1","resnet18","resnet50","repvgg_a2","resnet101"]},
+        "setting": {"type": "categorical", "values": ["baseline","DLS"]},
+        "swa": {"type": "categorical", "values": [ "None"]},
+        "opt": {"type": "categorical", "values": ["sgd"]},
+        "end": {"type": "discrete", "values": [1]},
+        "rep_num": {"type": "discrete", "values": [1]},
+        "dls_act": {"type": "categorical", "values": ["sech"]},
+        "lr": {"type": "discrete", "values": [0.05,0.1]},
+        "plus_base": {"type": "discrete", "values": [0.0]},
+        "calm_base": {"type": "discrete", "values": [1.0]},
+        "epochs": {"type": "discrete", "values": [250]},
+        "lr_scheduler": {"type": "categorical", "values": ["CosineLRscheduler"]}
+    },
+    "spec": {
+    "maxCombo": 1000000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}

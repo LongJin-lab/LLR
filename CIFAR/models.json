@@ -1,0 +1,19 @@
+{
+    "algorithm": "grid",                
+    "parameters": {
+        "seed":{"type": "discrete", "values": [42,1234,3107]}, 
+        "dls_act": {"type": "categorical", "values": ["sech"]},
+        "dls_coe0": {"type": "discrete", "values": [2.5]},
+        "dls_coe1": {"type": "discrete", "values": [0.15]},     
+        "model": {"type": "categorical", "values": ["resnet18", "wideresnet34x10", "repvgg_a2","shufflenetv2_x2_0","mobilenetv2_x1_4","resnet101"]},
+        "setting": {"type": "categorical", "values": ["baseline","DLS"]},
+        "swa": {"type": "categorical", "values": ["True", "None"]},
+        "opt": {"type": "categorical", "values": ["ssamf-sgd","sgd"]}
+    },
+    "spec": {
+    "maxCombo": 1000000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}

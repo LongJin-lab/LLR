@@ -1,0 +1,13 @@
+{
+    "algorithm": "bayes",                
+    "parameters": {
+        "dls_coe0": {"type": "float", "min": 10.0, "max": 20.0},
+        "dls_coe1": {"type": "float", "min": 0.05, "max": 0.8}
+    },
+    "spec": {
+    "maxCombo": 1000000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}

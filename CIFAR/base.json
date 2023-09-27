@@ -1,0 +1,18 @@
+{
+    "algorithm": "grid",                
+    "parameters": {
+        "dls_start": {"type": "discrete", "values": [-1.0]},           
+        "dls_coe0": {"type": "discrete", "values": [1]},
+        "model": {"type": "categorical", "values": ["repvgg_a0","shufflenetv2_x0_5","mobilenetv2_x0_5"]},
+        "dls_coe1": {"type": "discrete", "values": [0.15]},     
+        "setting": {"type": "categorical", "values": ["DLS"]},
+        "swa": {"type": "categorical", "values": ["None"]},
+        "opt": {"type": "categorical", "values": ["ssamf-sgd"]}        
+    },
+    "spec": {
+    "maxCombo": 10000,
+    "metric": "val_acc_SumDatasets",
+        "objective": "maximize"
+    },
+    "trials": 1
+}
